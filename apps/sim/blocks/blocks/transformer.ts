@@ -30,8 +30,8 @@ export const TransformerBlock: BlockConfig = {
       layout: 'full',
       language: 'javascript',
       generationType: 'javascript-function-body',
-      placeholder: `// La variable 'input' contient les données d'entrée
-// Retournez le résultat transformé
+      placeholder: `// Transformez vos données ici
+// 'input' contient les données d'entrée
 
 // Exemple 1: Ajouter un champ
 if (Array.isArray(input)) {
@@ -48,13 +48,11 @@ if (Array.isArray(input)) {
   );
 }
 
-// Exemple 3: Restructurer
+// Exemple 3: Structure simple
 return {
-  count: Array.isArray(input) ? input.length : 1,
-  data: input,
-  metadata: {
-    processedAt: new Date().toISOString()
-  }
+  count: Array.isArray(input) ? 
+    input.length : 1,
+  data: input
 };`,
       condition: {
         field: 'mode',
