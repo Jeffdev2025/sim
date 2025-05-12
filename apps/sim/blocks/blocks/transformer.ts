@@ -6,7 +6,7 @@ export const TransformerBlock: BlockConfig = {
   name: 'Transformer',
   description: 'Modifie la structure des données',
   longDescription: 'Transforme les données entrantes en utilisant du code JavaScript personnalisé ou des transformations prédéfinies. Permet de restructurer, filtrer, enrichir ou convertir des données selon vos besoins spécifiques.',
-  category: 'tools',
+  category: 'blocks',
   docsLink: 'https://docs.simstudio.ai/tools/transformer',
   bgColor: '#6366F1', // Indigo
   icon: CodeIcon,
@@ -30,25 +30,25 @@ export const TransformerBlock: BlockConfig = {
       layout: 'full',
       language: 'javascript',
       generationType: 'javascript-function-body',
-      placeholder: `// Exemple: Transformer un tableau d'objets
-// La variable 'input' contient les données d'entrée
+      placeholder: `// La variable 'input' contient les données d'entrée
 // Retournez le résultat transformé
 
-// Exemple 1: Ajouter un champ à chaque objet
+// Exemple 1: Ajouter un champ
 if (Array.isArray(input)) {
   return input.map(item => ({
     ...item,
-    transformed: true,
-    timestamp: new Date().toISOString()
+    transformé: true
   }));
 }
 
-// Exemple 2: Filtrer des éléments
+// Exemple 2: Filtrer
 if (Array.isArray(input)) {
-  return input.filter(item => item.value > 10);
+  return input.filter(item => 
+    item && item.valeur > 10
+  );
 }
 
-// Exemple 3: Restructurer complètement
+// Exemple 3: Restructurer
 return {
   count: Array.isArray(input) ? input.length : 1,
   data: input,
@@ -77,7 +77,7 @@ return {
       title: 'Options avancées',
       type: 'switch',
       layout: 'full',
-      value: () => false,
+      value: () => 'false',
     },
     {
       id: 'errorHandling',
@@ -139,7 +139,7 @@ return {
                 const input = ${JSON.stringify(params.input || {})};
                 const result = {...input};
                 
-                ${transformations.map(t => {
+                ${transformations.map((t: Record<string, string>) => {
                   const { source, operation, destination } = t
                   switch(operation) {
                     case 'copy': return `result["${destination}"] = input["${source}"];`
