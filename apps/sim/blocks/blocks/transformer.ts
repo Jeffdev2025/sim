@@ -30,26 +30,19 @@ export const TransformerBlock: BlockConfig = {
       layout: 'full',
       language: 'javascript',
       generationType: 'javascript-function-body',
-      placeholder: `// Transformez vos données
+      placeholder: `// Exemples simples:
 
-// Exemple: Enrichir
-if (Array.isArray(input)) {
-  return input.map(item => ({
-    ...item,
-    modifié: true
-  }));
-}
+// Ajouter un champ
+return input.map(i => ({
+  ...i, 
+  modifié: true
+}));
 
 // OU: Filtrer
-return input.filter(i => 
-  i.valeur > 10
-);
+return input.filter(i => i.valeur > 10);
 
 // OU: Restructurer
-return {
-  total: input.length,
-  données: input
-};`,
+return { total: input.length, données: input };`,
       condition: {
         field: 'mode',
         value: 'custom'
