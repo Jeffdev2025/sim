@@ -290,7 +290,7 @@ export function Code({
 
       <div
         className={cn(
-          'relative min-h-[100px] rounded-md border bg-background font-mono text-sm group',
+          'relative min-h-[200px] rounded-md border bg-background font-mono text-sm group',
           isConnecting && 'ring-2 ring-blue-500 ring-offset-2'
         )}
         onDragOver={(e) => e.preventDefault()}
