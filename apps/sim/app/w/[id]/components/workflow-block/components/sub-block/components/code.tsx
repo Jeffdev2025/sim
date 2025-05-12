@@ -290,7 +290,7 @@ export function Code({
 
       <div
         className={cn(
-          'relative min-h-[300px] rounded-md border bg-background font-mono text-sm group',
+          'relative min-h-[400px] rounded-md border bg-background font-mono text-base group',
           isConnecting && 'ring-2 ring-blue-500 ring-offset-2'
         )}
         onDragOver={(e) => e.preventDefault()}
@@ -383,9 +383,9 @@ export function Code({
             padding={12}
             style={{
               fontFamily: 'inherit',
-              fontSize: 'inherit',
-              minHeight: isCollapsed ? '0px' : '106px',
-              lineHeight: '21px',
+              fontSize: '1.1rem',
+              minHeight: isCollapsed ? '0px' : '350px',
+              lineHeight: '24px',
               outline: 'none',
             }}
             className={cn(
