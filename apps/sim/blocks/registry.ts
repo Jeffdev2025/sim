@@ -7,6 +7,11 @@ import { AgentBlock } from './blocks/agent'
 import { AirtableBlock } from './blocks/airtable'
 import { ApiBlock } from './blocks/api'
 // import { AutoblocksBlock } from './blocks/autoblocks'
+import { FilterBlock } from './blocks/filter'
+import { MapperBlock } from './blocks/mapper'
+import { MergeBlock } from './blocks/merge'
+import { SplitterBlock } from './blocks/splitter'
+import { SwitchBlock } from './blocks/switch'
 import { TransformerBlock } from './blocks/transformer'
 import { BrowserUseBlock } from './blocks/browser_use'
 import { ClayBlock } from './blocks/clay'
@@ -63,6 +68,11 @@ export const registry: Record<string, BlockConfig> = {
   airtable: AirtableBlock,
   api: ApiBlock,
   // autoblocks: AutoblocksBlock,
+  filter: FilterBlock,
+  mapper: MapperBlock,
+  merge: MergeBlock,
+  splitter: SplitterBlock,
+  switch: SwitchBlock,
   transformer: TransformerBlock,
   browser_use: BrowserUseBlock,
   clay: ClayBlock,
