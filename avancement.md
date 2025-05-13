@@ -268,18 +268,52 @@
 - Tests unitaires validant toutes les fonctionnalités (13 tests réussis)
 - Structure conforme aux standards du projet
 
+### F020 - Stop and Error (✅ Terminé le 12/05/2025)
+
+**Fonctionnalités implémentées :**
+- Déclenchement d'erreurs personnalisées avec trois niveaux de sévérité :
+  * Warning : simple avertissement sans arrêt obligatoire
+  * Error : erreur standard nécessitant une attention
+  * Fatal : erreur critique nécessitant l'arrêt immédiat
+- Trois stratégies d'arrêt configurable :
+  * Bloc uniquement : continue le workflow mais marque ce bloc comme en erreur
+  * Branche : arrête l'exécution de la branche courante uniquement
+  * Workflow : arrête complètement l'exécution du workflow
+- Support des erreurs conditionnelles :
+  * Déclenchement basé sur une expression JavaScript personnalisée
+  * Accès aux données d'entrée pour évaluer la condition
+  * Possibilité de déclencher l'erreur uniquement dans certains cas
+- Options de journalisation avancées :
+  * Destination configurable (console, fichier, les deux)
+  * Inclusion optionnelle de l'horodatage
+  * Inclusion optionnelle de la trace d'appel
+  * Chemin de fichier de log personnalisable
+- Fonctionnalités supplémentaires :
+  * Mode simulation pour tester sans déclencher d'erreurs réelles
+  * Code d'erreur personnalisé pour identification facile
+  * Données d'erreur supplémentaires pour le débogage
+  * Statistiques d'exécution détaillées
+
+**Modifications techniques :**
+- Création des fichiers stop_error.ts, stop_error_execution.ts et stop_error.test.ts
+- Séparation claire entre la configuration du bloc et la logique d'exécution
+- Ajout au registre des blocs
+- Implémentation d'une icône StopErrorIcon dédiée (triangle d'avertissement)
+- Tests unitaires validant toutes les fonctionnalités (13 tests réussis)
+- Structure conforme aux standards du projet
+
 ## Prochaines Étapes
 
 ### Blocs Prioritaires (P1) à Implémenter
 
-1. **F020 - Stop and Error** (Prochain bloc à développer)
-   - Déclenche une erreur et arrête le workflow
-   - Priorité: P1, Complexité: C1
+1. **F016 - Scheduler** (Prochain bloc à développer)
+   - Planifie des tâches récurrentes
+   - Priorité: P1, Complexité: C3
    - Fonctionnalités à implémenter:
-     * Définition de messages d'erreur personnalisés
-     * Options de sévérité (warning, error, fatal)
-     * Arrêt complet ou partiel du workflow
-     * Journalisation des erreurs
+     * Planification basée sur des expressions cron
+     * Intervalles réguliers (toutes les X minutes/heures)
+     * Déclenchement à des dates/heures spécifiques
+     * Gestion des fuseaux horaires
 
 2. **F019 - Wait**
    - Ajoute un délai avant de passer à l'étape suivante

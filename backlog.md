@@ -43,7 +43,7 @@
 | F017  | If                   | Dirige les éléments vers différentes branches (vrai/faux)        | P0 | C2 | - | ✅ Terminé (Condition) |
 | F018  | Loop                 | Exécute une séquence d'actions sur chaque élément d'une liste    | P0 | C3 | - | ✅ Terminé |
 | F019  | Wait                 | Ajoute un délai avant de passer à l'étape suivante               | P1 | C1 | - | ✅ Terminé |
-| F020  | Stop and Error       | Déclenche une erreur et arrête le workflow                       | P1 | C1 | - | 🔔 À faire |
+| F020  | Stop and Error       | Déclenche une erreur et arrête le workflow                       | P1 | C1 | - | ✅ Terminé |
 | F021  | Execute Sub-workflow | Exécute un sous-workflow comme composant réutilisable            | P2 | C4 | - | 🔔 À faire |
 
 ## Blocs d'Intelligence Artificielle

@@ -14,6 +14,7 @@ import { LoopBlock } from './blocks/loop'
 import { SplitterBlock } from './blocks/splitter'
 import { SwitchBlock } from './blocks/switch'
 import { WaitBlock } from './blocks/wait'
+import { StopErrorBlock } from './blocks/stop_error'
 import { TransformerBlock } from './blocks/transformer'
 import { BrowserUseBlock } from './blocks/browser_use'
 import { ClayBlock } from './blocks/clay'
@@ -77,6 +78,7 @@ export const registry: Record<string, BlockConfig> = {
   splitter: SplitterBlock,
   switch: SwitchBlock,
   wait: WaitBlock,
+  stop_error: StopErrorBlock,
   transformer: TransformerBlock,
   browser_use: BrowserUseBlock,
   clay: ClayBlock,
