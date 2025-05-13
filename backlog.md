@@ -35,13 +35,13 @@
 | ID    | Nom                  | Description                                                      | Priorité | Complexité | Dépendances | État |
 |-------|----------------------|------------------------------------------------------------------|----------|------------|-------------|-------|
 | F011  | Switch               | Dirige le flux selon plusieurs conditions                        | P0 | C2 | - | ✅ Terminé |
-| F012  | Merge                | Fusionne plusieurs flux en un seul                               | P0 | C3 | - | 🔔 À faire |
+| F012  | Merge                | Fusionne plusieurs flux en un seul                               | P0 | C3 | - | ✅ Terminé |
 | F013  | Switch Enhanced      | Version améliorée du bloc Switch avec fonctionnalités avancées      | P0 | C3 | - | ✅ Terminé |
 | F014  | Parallel             | Exécute plusieurs actions en parallèle                           | P1 | C4 | - | 🔔 À faire |
 | F015  | Webhook              | Reçoit des données via un point d'entrée HTTP                    | P1 | C3 | - | 🔔 À faire |
 | F016  | Scheduler            | Planifie des tâches récurrentes                                  | P1 | C3 | - | 🔔 À faire |
-| F017  | If                   | Dirige les éléments vers différentes branches (vrai/faux)        | P0 | C2 | - | 🔔 À faire |
-| F018  | Loop                 | Exécute une séquence d'actions sur chaque élément d'une liste    | P0 | C3 | - | 🔔 À faire |
+| F017  | If                   | Dirige les éléments vers différentes branches (vrai/faux)        | P0 | C2 | - | ✅ Terminé (Condition) |
+| F018  | Loop                 | Exécute une séquence d'actions sur chaque élément d'une liste    | P0 | C3 | - | ✅ Terminé |
 | F019  | Wait                 | Ajoute un délai avant de passer à l'étape suivante               | P1 | C1 | - | 🔔 À faire |
 | F020  | Stop and Error       | Déclenche une erreur et arrête le workflow                       | P1 | C1 | - | 🔔 À faire |
 | F021  | Execute Sub-workflow | Exécute un sous-workflow comme composant réutilisable            | P2 | C4 | - | 🔔 À faire |

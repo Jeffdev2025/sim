@@ -10,6 +10,7 @@ import { ApiBlock } from './blocks/api'
 import { FilterBlock } from './blocks/filter'
 import { MapperBlock } from './blocks/mapper'
 import { MergeBlock } from './blocks/merge'
+import { LoopBlock } from './blocks/loop'
 import { SplitterBlock } from './blocks/splitter'
 import { SwitchBlock } from './blocks/switch'
 import { TransformerBlock } from './blocks/transformer'
@@ -71,6 +72,7 @@ export const registry: Record<string, BlockConfig> = {
   filter: FilterBlock,
   mapper: MapperBlock,
   merge: MergeBlock,
+  loop: LoopBlock,
   splitter: SplitterBlock,
   switch: SwitchBlock,
   transformer: TransformerBlock,
