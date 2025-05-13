@@ -13,6 +13,7 @@ import { MergeBlock } from './blocks/merge'
 import { LoopBlock } from './blocks/loop'
 import { SplitterBlock } from './blocks/splitter'
 import { SwitchBlock } from './blocks/switch'
+import { WaitBlock } from './blocks/wait'
 import { TransformerBlock } from './blocks/transformer'
 import { BrowserUseBlock } from './blocks/browser_use'
 import { ClayBlock } from './blocks/clay'
@@ -75,6 +76,7 @@ export const registry: Record<string, BlockConfig> = {
   loop: LoopBlock,
   splitter: SplitterBlock,
   switch: SwitchBlock,
+  wait: WaitBlock,
   transformer: TransformerBlock,
   browser_use: BrowserUseBlock,
   clay: ClayBlock,

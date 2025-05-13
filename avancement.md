@@ -239,18 +239,47 @@
 - Tests unitaires validant toutes les fonctionnalités
 - Structure conforme aux standards du projet
 
+### F019 - Wait (✅ Terminé le 12/05/2025)
+
+**Fonctionnalités implémentées :**
+- Trois modes d'attente distincts :
+  * Délai fixe : attente d'une durée spécifiée avec unités configurable (ms, secondes, minutes, heures)
+  * Jusqu'à une date/heure : attente jusqu'à un moment précis
+  * Jusqu'à condition : attente jusqu'à ce qu'une condition JavaScript soit satisfaite
+- Options avancées pour le mode conditionnel :
+  * Intervalle de vérification configurable
+  * Timeout pour éviter les attentes infinies
+  * Nombre de tentatives limité ou illimité
+- Stratégies d'interruption :
+  * Aucune : l'attente ne peut pas être interrompue
+  * Par signal : interruption basée sur un signal externe
+  * Par timeout : interruption après un délai maximum
+- Fonctionnalités supplémentaires :
+  * Mode simulation pour tester sans délai réel
+  * Journalisation détaillée des opérations
+  * Statistiques d'exécution (durée, vérifications, etc.)
+  * Gestion complète des erreurs
+
+**Modifications techniques :**
+- Création des fichiers wait.ts, wait_execution.ts et wait.test.ts
+- Séparation claire entre la configuration du bloc et la logique d'exécution
+- Ajout au registre des blocs
+- Implémentation d'une icône WaitIcon dédiée
+- Tests unitaires validant toutes les fonctionnalités (13 tests réussis)
+- Structure conforme aux standards du projet
+
 ## Prochaines Étapes
 
 ### Blocs Prioritaires (P1) à Implémenter
 
-1. **F019 - Wait** (Prochain bloc à développer)
-   - Ajoute un délai avant de passer à l'étape suivante
+1. **F020 - Stop and Error** (Prochain bloc à développer)
+   - Déclenche une erreur et arrête le workflow
    - Priorité: P1, Complexité: C1
    - Fonctionnalités à implémenter:
-     * Délai fixe en millisecondes/secondes/minutes
-     * Attente jusqu'à une date/heure spécifique
-     * Attente conditionnelle (jusqu'à ce qu'une condition soit remplie)
-     * Options d'interruption
+     * Définition de messages d'erreur personnalisés
+     * Options de sévérité (warning, error, fatal)
+     * Arrêt complet ou partiel du workflow
+     * Journalisation des erreurs
 
 2. **F019 - Wait**
    - Ajoute un délai avant de passer à l'étape suivante
